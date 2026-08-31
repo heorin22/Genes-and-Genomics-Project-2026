@@ -70,6 +70,6 @@ positions.
 
 ```text
 data/       Input mutation dataset
-src/        ESM-2 variant-scoring pipeline
+scripts/        ESM-2 variant-scoring pipeline
 results/    Statistical outputs and figures
 report/     Original project report
