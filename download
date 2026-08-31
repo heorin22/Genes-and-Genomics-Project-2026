@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Nextflow
+.nextflow*
+work/
+
+# OS / IDE
+.DS_Store
+.vscode/
+
+# Large model/cache files
+.cache/
