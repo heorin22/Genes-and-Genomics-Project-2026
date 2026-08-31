@@ -4,8 +4,10 @@ A bioinformatics project investigating whether a protein language model
 can distinguish pathogenic CFTR missense mutations from benign variants
 using sequence information alone.
 
-This project was completed as part of the Genes and Genomics module at
-Imperial College London.
+This project was completed as part of the Genes and Genomics module at Imperial College London.
+To extend beyond a conventional literature review, I designed an original computational case study
+in which I curated clinically characterised CFTR missense variants and used ESM-2 to quantify their
+predicted functional impact using log-likelihood ratios.
 
 ## Overview
 
