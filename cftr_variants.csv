@@ -1,0 +1,53 @@
+mutation,class
+F508C,Benign
+M470V,Benign
+I506V,Benign
+E92K,Benign
+M1V,Benign
+I507V,Benign
+R1162L,Benign
+V754M,Benign
+G576A,Benign
+R31C,Benign
+R668C,Benign
+L997F,Benign
+S1235R,Benign
+D1270N,Benign
+R560T,Class II
+A561E,Class II
+N1303K,Class II
+G85E,Class II
+M1101K,Class II
+S492F,Class II
+W57G,Class II
+H1079P,Class II
+Q1100P,Class II
+R347P,Class II
+Y569D,Class II
+G551D,Class III
+G551S,Class III
+G178R,Class III
+G178E,Class III
+S549N,Class III
+S549R,Class III
+S549I,Class III
+G1244E,Class III
+S1251N,Class III
+S1255P,Class III
+G1349D,Class III
+S912L,Class III
+R117H,Class IV
+R117C,Class IV
+R117G,Class IV
+R117L,Class IV
+R334W,Class IV
+R334Q,Class IV
+R334L,Class IV
+R352Q,Class IV
+R352W,Class IV
+R1070Q,Class IV
+L206W,Class IV
+D1152H,Class IV
+D579G,Class IV
+S977F,Class IV
+F1052V,Class IV
