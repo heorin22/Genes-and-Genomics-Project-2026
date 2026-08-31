@@ -1,0 +1,73 @@
+# Predicting CFTR Missense Variant Pathogenicity with ESM-2
+
+A bioinformatics project investigating whether a protein language model
+can distinguish pathogenic CFTR missense mutations from benign variants
+using sequence information alone.
+
+This project was completed as part of the Genes and Genomics module at
+Imperial College London.
+
+## Overview
+
+Cystic fibrosis is caused by mutations in the CFTR protein, which functions
+as a phosphorylation-regulated ATP-gated anion channel.
+
+In this project, I used Meta AI's ESM-2 protein language model to estimate
+the functional impact of CFTR missense variants.
+
+For each mutation, the wild-type residue was masked and ESM-2 was used to
+calculate the probability of the wild-type and mutant amino acids.
+
+Variant effect was quantified using the log-likelihood ratio:
+
+LLR = log P(mutant | sequence context) - log P(wild-type | sequence context)
+
+More negative LLR values indicate substitutions considered less compatible
+with the sequence context and therefore potentially more damaging.
+
+## Dataset
+
+Clinically characterised CFTR missense variants were obtained from CFTR2
+and ClinVar and grouped into:
+
+- Benign
+- Class II — folding / trafficking defects
+- Class III — gating defects
+- Class IV — conductance defects
+
+## Methods
+
+- Protein language model: ESM-2 (`facebook/esm2_t33_650M_UR50D`)
+- Framework: PyTorch / Hugging Face Transformers
+- Variant scoring: masked-language-model log-likelihood ratio
+- Statistical analysis:
+  - Welch's t-test
+  - Tukey HSD
+  - descriptive statistics
+- Visualisation: Python / Matplotlib / Seaborn
+
+## Results
+
+ESM-2 broadly distinguished benign CFTR variants from pathogenic
+Class II and Class III variants.
+
+Mean LLR:
+
+| Variant class | Mean LLR |
+|---|---:|
+| Benign | -3.37 |
+| Class II | -8.42 |
+| Class III | -7.65 |
+| Class IV | -2.77 |
+
+Class II and III mutations showed substantially more negative scores,
+consistent with substitutions occurring at strongly constrained protein
+positions.
+
+## Repository structure
+
+```text
+data/       Input mutation dataset
+src/        ESM-2 variant-scoring pipeline
+results/    Statistical outputs and figures
+report/     Original project report
